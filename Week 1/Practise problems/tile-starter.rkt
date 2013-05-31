@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-reader.ss" "lang")((modname test1) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname tile-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
 (require 2htdp/image)
 
 ;; tile-starter.rkt
@@ -16,11 +16,10 @@
 ; functions to make a more interesting or more attractive image.
 ; 
 
-(beside (square 40 "solid" "black")
-       (square 40 "solid" "red"))
-(beside (square 40 "solid" "black")
-        (square 40 "solid" "red"))
-            
+(above (beside (square 100 "solid" "black")
+       (square 100 "solid" "red"))
+       (beside (square 100 "solid" "red")
+       (square 100 "solid" "black")))
               
               
                         
