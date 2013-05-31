@@ -9,3 +9,5 @@
 ; 
 ; Write the BSL expression that represents the arithmetic expression (7 - 2) * 4 which equals 20. 
 ; 
+
+(* 4 (- 7 2))
