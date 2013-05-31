@@ -31,6 +31,14 @@
  (if (string=? (string-ith "abc" 0) "a")
        (string-append "abc" "a")
        "abc")
+ 
+ (if (string=? "a" "a")
+     (string-append "abc" "a")
+     "abc")
+ ( if true
+      (string-append "abc" "a")
+      "abc")
+ (string-append "abc" "a")
 
 
 
