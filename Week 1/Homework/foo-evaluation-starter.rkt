@@ -20,3 +20,17 @@
 ; 
 ; Be sure to show every intermediate evaluation step.
 ; 
+
+(define (foo s)
+   (if (string=? (string-ith s 0) "a")
+       (string-append s "a")
+       s))
+(foo (substring "abcde" 0 3))
+
+(foo "abc")
+ (if (string=? (string-ith "abc" 0) "a")
+       (string-append "abc" "a")
+       "abc")
+
+
+
