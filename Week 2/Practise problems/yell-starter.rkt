@@ -14,3 +14,9 @@
 ; 
 ; Leave behind commented out versions of the stub and template.
 ; 
+
+;; String -> String
+;; add an "!" to the end of s
+(check-expect (yell "Boo") "Boo!")
+(check-expect (yell "Crash") "Crash!")
+;;(define (yell s) "") ;this is the stub
