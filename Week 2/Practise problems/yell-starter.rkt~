@@ -20,8 +20,3 @@
 (check-expect (yell "Boo") "Boo!")
 (check-expect (yell "Crash") "Crash!")
 ;;(define (yell s) "") ;this is the stub
-;; (define (yell s)    ;this is the template
-;; (... s)
-
-(define (yell s)  
-  (string-append s "!"))
