@@ -16,7 +16,7 @@
 ; Leave behind commented out versions of the stub and template.
 ; 
 
-; Image -> Number
+; Image -> Natural
 ;produce the area of an image by multiplying its width by height
 (check-expect (image-area (rectangle 2 3 "solid" "red")) (* 2 3))
 
