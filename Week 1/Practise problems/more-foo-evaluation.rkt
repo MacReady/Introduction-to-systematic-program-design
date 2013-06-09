@@ -8,8 +8,8 @@
 ; 
 ; Given the following function definition:
 ; 
-; (define (foo n)
-;   (* n n))
+ (define (foo n)
+   (* n n))
 ; 
 ; Write out the step-by-step evaluation of the expression: 
 ; 
@@ -17,3 +17,6 @@
 ; 
 ; Be sure to show every intermediate evaluation step.
 ; 
+
+(foo 7)
+(* 7 7)
