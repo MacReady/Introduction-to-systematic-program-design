@@ -13,7 +13,7 @@
 ; 
 ; Write out the step-by-step evaluation of the expression: 
 ; 
-; (foo (+ 3 4))
+ (foo (+ 3 4))
 ; 
 ; Be sure to show every intermediate evaluation step.
 ; 
