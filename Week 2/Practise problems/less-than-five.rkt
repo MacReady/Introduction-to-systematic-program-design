@@ -28,5 +28,5 @@
 ;  (... s))
 
 (define (count? s)     
-  (> (string-length s) 5))
+  (< (string-length s) 5))
      
