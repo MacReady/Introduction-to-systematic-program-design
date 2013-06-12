@@ -21,3 +21,15 @@
 ; commented out stub, examples/tests, commented out template,
 ; and the completed function definition.
 ; 
+
+;; String -> String
+;; adds an exclamtion point to the end of a s
+(check-expect (summon "Dragon") "summon Dragon!")
+(check-expect (summon "weasel") "summon weasel!")              
+;;(define (summon s) "") ;stub
+
+;;(define (summon s)     ;template
+;;  (... s))
+
+(define (summon s)
+  (... s))
