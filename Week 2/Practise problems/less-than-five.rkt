@@ -16,3 +16,17 @@
 ; commented out stub, examples/tests, commented out template,
 ; and the completed function definition.
 ; 
+
+; String -> Bool
+; Consumes a string and produces a true answer if less then 5
+(check-expect (count? "hello") false )
+(check-expect (count? "Tea") true )
+
+;(define (count? s) ;stub
+;  true)
+;(define (count? s)     ;template
+;  (... s))
+
+(define (count? s)     
+  (> (string-length s) 5))
+     
