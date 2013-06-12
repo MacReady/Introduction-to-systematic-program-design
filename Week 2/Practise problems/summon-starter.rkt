@@ -32,4 +32,4 @@
 ;;  (... s))
 
 (define (summon s)
-  (... s))
+  (string-append "summon " s "!"))
