@@ -18,3 +18,14 @@
 ; Your complete design should include signature, purpose, commented out stub, examples/tests, 
 ; commented out template and the completed function definition.
 ; 
+
+; Image -> Image
+; consume an image and produce the same image with a box around it
+(check-expect (boxify (circle 10 "solid" "red")) 0)
+
+;(define (boxify img) 0) ;stub
+;(define (boxify img)    ;template
+;  (... img)
+  
+(define (boxify img)
+  (overlay (+ 1 img))  
