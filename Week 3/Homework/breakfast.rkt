@@ -19,7 +19,18 @@
 ; Call it OatmealTemp.
 ; 
 
+;; OatmealTemp is Integer[0, 20]
+;; interp. the temperature of the oven in celsius.
+(define OT1 0)  ;too cold
+(define OT2 10) ;perfect temperature
+(define OT3 20) ;too hot
 
+#;
+(define (fn-for-OatmealTemp ot)
+  (... ot))
+
+;; Template rules used:
+;; - atomic non-distinct: Integer[0, 20]
 
 ; 
 ; PROBLEM B:
@@ -34,6 +45,16 @@
 ; Call it Adjustment.
 ; 
 
+;; Adjustment is one of:
+;; - "Turn knob to the right"
+;; - "Do not turn the knob"
+;; - "Turn knob to the left"
+;; interp. the direction to turn a knob on a cooker
+
+;; <examples are redundant for enumerations>
+
+(define (fn-for-adjustment a)
+  (cond [(string=? "Turn knob to the right" a) (...)]
 
 ;; =================
 ;; Functions:
