@@ -25,7 +25,7 @@
 (define OT2 10) ;perfect temperature
 (define OT3 20) ;too hot
 
-#;
+
 (define (fn-for-OatmealTemp ot)
   (... ot))
 
@@ -53,8 +53,16 @@
 
 ;; <examples are redundant for enumerations>
 
+#;
 (define (fn-for-adjustment a)
   (cond [(string=? "Turn knob to the right" a) (...)]
+        [(string=? "Do not turn the knob" a) (...)]
+        [(string=? "Turn knob to the left" a)(...)]))
+;; Template rules used:
+;; - one of: 3 cases
+;; - atomic distinct: "Turn knob to the right"
+;; - atomic distinct: "Do not turn the knob"
+;; - atomic distinct: "Turn knob to the left"
 
 ;; =================
 ;; Functions:
@@ -67,3 +75,16 @@
 ; Call it oatmeal-temp-to-adjustment.
 ; 
 
+; OatmealTemp -> Adjustment
+; produce the required oven knob adustment based on the oatmeal temperature
+(check-expect (oatmeal-temp-to-adjustment 1) "Turn knob to the right")
+(check-expect (oatmeal-temp-to-adjustment 10) "Do not turn the knob")
+(check-expect (oatmeal-temp-to-adjustment 18) "Turn knob to the left") 
+
+;(define (OatmealTemp? ot) "")  ;stub
+;<use template from Adjustment
+
+(define (oatmeal-temp-to-adjustment ot)
+  (cond [(< 10 ot) "Turn knob to the right"]
+        [(= 10 ot) "Do not turn the knob"]
+        [(and (>= 20 ot)(< 10 ot)) "Turn knob to the left"]))
