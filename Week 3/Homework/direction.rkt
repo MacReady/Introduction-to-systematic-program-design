@@ -40,3 +40,21 @@
 
 ;; =================
 ;; Functions:
+
+;; Direction -> Direction
+;; produce new direction when you turn left 90 degress from original direction
+(check-expect (left-turn "N") "W")
+(check-expect (left-turn "S") "E")
+(check-expect (left-turn "E") "N")
+(check-expect (left-turn "W") "S")
+
+;(define (left-turn d) "W") ;stub
+
+;<use template from Direction
+
+(define (left-turn d )
+  (cond [(string=? d "N") "W"]
+        [(string=? d "S") "E"]
+        [(string=? d "E") "N"]
+        [(string=? d "W") "S"]))
+        
