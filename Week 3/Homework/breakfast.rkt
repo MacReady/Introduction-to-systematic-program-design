@@ -81,7 +81,7 @@
 (check-expect (oatmeal-temp-to-adjustment 10) "Do not turn the knob")
 (check-expect (oatmeal-temp-to-adjustment 18) "Turn knob to the left") 
 
-;(define (OatmealTemp? ot) "")  ;stub
+;(define (OatmealTemp? ot) "")  ;stub 
 ;<use template from Adjustment
 
 (define (oatmeal-temp-to-adjustment ot)
