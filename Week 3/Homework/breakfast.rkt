@@ -75,16 +75,16 @@
 ; Call it oatmeal-temp-to-adjustment.
 ; 
 
-; OatmealTemp -> Adjustment
+; Number -> String
 ; produce the required oven knob adustment based on the oatmeal temperature
 (check-expect (oatmeal-temp-to-adjustment 1) "Turn knob to the right")
 (check-expect (oatmeal-temp-to-adjustment 10) "Do not turn the knob")
 (check-expect (oatmeal-temp-to-adjustment 18) "Turn knob to the left") 
 
-;(define (OatmealTemp? ot) "")  ;stub
+;(define (oatmeal-temp-to-adjustment ot) "")  ;stub
 ;<use template from Adjustment
 
-(define (oatmeal-temp-to-adjustment ot)
+(define (oatmeal-temp-to-adjustment ot )
   (cond [(< 10 ot) "Turn knob to the right"]
         [(= 10 ot) "Do not turn the knob"]
         [(and (>= 20 ot)(< 10 ot)) "Turn knob to the left"]))
