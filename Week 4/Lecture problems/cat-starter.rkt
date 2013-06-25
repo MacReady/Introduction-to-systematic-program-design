@@ -93,6 +93,6 @@
 ;<use the template from Cat>
 
 (define (render c)
-  (place-image CAT-IMG c CTR-Y MTS))
+  (place-image CAT-IMG c CTR-Y MTS)) 
 
 
