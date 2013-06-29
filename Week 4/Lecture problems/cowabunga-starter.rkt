@@ -39,9 +39,9 @@
 
 (define CTR-Y (/ HEIGHT 2))
 
-(define RCOW )
+(define RCOW  )
 
-(define LCOW )
+(define LCOW  )
 
 (define MTS (empty-scene WIDTH HEIGHT))
 
@@ -86,16 +86,48 @@
 (check-expect (next-cow (make-cow 2 -3)) (make-cow 0 3))
 
 
-;    ;stub
+;(define (next-cow c) c)    ;stub
 
 ;took template from Cow
 (define (next-cow c)
-  (cond [(... (cow-x c)      
-       (cow-dx c)))   
+  (cond [(> (+ (cow-x c) (cow-dx c)) WIDTH) (make-cow WIDTH (- (cow-dx c)))]
+        [(< (+ (cow-x c) (cow-dx c)) 0) (make-cow 0 (- (cow-dx c)))]
+        [else
+         (make-cow (+ (cow-x c) (cow-dx c))
+               (cow-dx c))]))
+               
+          
 
 ;; Cow -> Image
 ;; place appropriate cow image on MTS at (cow-x c) and CTR-Y
-(define (render-cow c) MTS)  ;stub
+(check-expect (render-cow (make-cow 99 3))
+              (place-image RCOW 99 CTR-Y MTS))
+(check-expect (render-cow (make-cow 33 -3))
+              (place-image LCOW 33 CTR-Y MTS))
+
+;(define (render-cow c) MTS)  ;stub
+
+; took template from Cow
+(define (render-cow c)
+  (place-image (choose-image c) (cow-x c) CTR-Y MTS))
+       
+
+;; Cow -> Image
+;; produce RCOW or LCOW depending on direction cow is going; LCOW if dx = 0
+(check-expect (choose-image (make-cow 10 3)) RCOW)
+(check-expect (choose-image (make-cow 11 -3)) LCOW)
+(check-expect (choose-image (make-cow 11 -0)) LCOW)
+
+
+;(define (choose-image c) RCOW)
+
+;took template from Cow
+
+(define (choose-image c)
+  (if (> (cow-dx c) 0)
+      RCOW
+      LCOW))
+       
 
 ;; Cow KeyEvent -> Cow
 ;; reverse direction of cow travel when space bar is pressed
